@@ -1,4 +1,5 @@
-def test_format() -> None:
-    # 汚いコードってどうやって書くんだろう
+def aaaaa():
+    print("")
+
     if True:
-        print("True")
+        print("AAAAAAA")
