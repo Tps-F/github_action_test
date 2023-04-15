@@ -1,39 +1,5 @@
 def aaaaa():
+    print("")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    print(
-
-
-
-
-
-
-
-
-
-        ""
-    )
-
-    if (
-
-
-
-
-        True
-    ): print("AAAAAAA")
+    if True:
+        print("AAAAAAA")
