@@ -27,4 +27,4 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: "AutoFormat ${{ !github.head_ref }}"
+          commit-message: AutoFormat ${{ !github.head_ref }}
