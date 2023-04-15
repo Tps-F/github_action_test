@@ -25,7 +25,8 @@ jobs:
     #   with:
     #     commit_message: Apply Code Formatter Change
       - name: Create Pull Request
+        if: ${{ !github.head_ref }}
+        continue-on-error: true
         uses: peter-evans/create-pull-request@v4
         with:
-          continue-on-error: true
           commit-message: AutoFormat ${{ !github.head_ref }}
