@@ -1,9 +1,9 @@
-name: Lint
+name: Black
 
 on: [push, pull_request]
 
 jobs:
-  lint:
+  format:
     permissions:
       actions: write
       checks: write
@@ -19,7 +19,7 @@ jobs:
       - name: Install black
         run: pip install black
       - name: run black
-        run: black .
+        run: black $(git ls-files '*.py')
       - name: AutoCommit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
