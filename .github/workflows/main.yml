@@ -8,8 +8,15 @@ jobs:
     continue-on-error: true
     steps:
       - uses: actions/checkout@v3
-      - uses: psf/black@stable
-      - name: Auto Commit
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install black
+        run: pip install black
+      - name: run black
+        run: black .
+      - name: AutoCommit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Apply Code Formatter Change
