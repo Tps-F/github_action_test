@@ -8,3 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: psf/black@stable
+      - name: Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply Code Formatter Change
