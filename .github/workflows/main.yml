@@ -24,8 +24,15 @@ jobs:
     #   uses: stefanzweifel/git-auto-commit-action@v4
     #   with:
     #     commit_message: Apply Code Formatter Change
+      - name: Commit back
+        if: ${{ !github.head_ref }}
+        continue-on-error: true
+        run: |
+          git config --local user.name 'github-actions[bot]'
+          git config --local user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          git commit -m "AutoFormat ${{ !github.head_ref }} "
       - name: Create Pull Request
+        if: ${{ !github.head_ref }}
+        continue-on-error: true
         uses: peter-evans/create-pull-request@v4
-        with:
-          commit-message: AutoFormat 
-          base: ${{ !github.head_ref }}
