@@ -47,4 +47,5 @@ jobs:
         continue-on-error: true
         uses: peter-evans/create-pull-request@v4
         with:
-          commit_message: Apply Code Formatter Change
+          body: Apply Code Formatter Change
+          commit-message: Automatic code format
