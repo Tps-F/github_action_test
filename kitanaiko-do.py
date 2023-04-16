@@ -1,7 +1,4 @@
-def aaaaa():
-    print("")
 
-    if True:
 
 
 
@@ -15,3 +12,4 @@ def aaaaa():
         print(
         
         "AAAAAAA")
+
