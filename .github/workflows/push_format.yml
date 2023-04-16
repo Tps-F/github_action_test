@@ -34,7 +34,7 @@ jobs:
         run: black .
 
       - name: Commit Back
-        if: ${{github.ref_name}}
+        if: ${{!github.ref_name}}
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
@@ -42,7 +42,7 @@ jobs:
           git commit -m "Format code"
       
       - name: Create Pull Request
-        if: ${{github.ref_name}}
+        if: ${{!github.ref_name}}
         continue-on-error: true
         uses: peter-evans/create-pull-request@v4
         with:
