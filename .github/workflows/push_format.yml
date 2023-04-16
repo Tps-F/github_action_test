@@ -1,6 +1,9 @@
 name: push format
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   push_format:
