@@ -34,7 +34,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]
           git add --all
-          git commit -m f"Format code"
+          git commit -m "Format code"
       
       - name: Create Pull Request
         if: ${{ !github.head_ref }}
