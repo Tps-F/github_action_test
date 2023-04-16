@@ -43,7 +43,7 @@ jobs:
           git commit -m "Format code"
       
       - name: Create Pull Request
-        if: ${{ success() }}
+        if: steps.commitback.outcome == 'success'
         continue-on-error: true
         uses: peter-evans/create-pull-request@v4
         with:
