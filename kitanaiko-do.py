@@ -4,14 +4,4 @@ def aaaaa():
     if True:
         print("AAAAAAA")
     else:
-
-
-
-
-
-
-
-
-
-
         print("aaaaaa")
